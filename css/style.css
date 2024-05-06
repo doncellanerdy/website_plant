@@ -1,0 +1,391 @@
+/* Box Model Hack */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     background-color: black;
+     font-family: 'Montserrat', sans-serif;
+}
+
+li{
+     display: inline-block;
+     padding: 0 .3em;
+}
+
+ul{
+     padding: 0;
+}
+
+.container{
+     width: 80%;
+     border: 1px solid gray;
+     margin: 0 auto;
+}
+
+.left{
+     float: left;
+}
+
+.right{
+     float: right;
+}
+
+.mobileMenu{
+     display: none;
+}
+
+.topnav #myLinks {
+     display: none;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+     background-color: seagreen;
+}
+
+header a{
+     color: black;
+     text-decoration: none;
+}
+
+header ul{
+     margin: 0 3em;
+}
+
+main{
+     display: flex;
+     flex-direction: column;
+     background-color: white;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.miniNav{
+     background-color: black;
+     color: white;
+     font-size: .8rem;
+     padding: 1em 3em;
+}
+
+.miniNav a{
+     color: white;
+     padding-left: 1em;
+}
+
+nav{
+     margin: 0 auto;
+     width: fit-content;
+     text-align: center;
+     line-height: 100px;
+}
+
+nav a{
+     transition: 0.4s ease;
+     border-bottom: 4px solid seagreen;
+     padding-bottom: 20px;
+}
+
+nav a:hover{
+     border-bottom: 4px solid #ffffff;
+     padding-bottom: 6px; 
+}
+
+
+.categoryGallery{
+     height: 350px;
+}
+
+.categoryGallery{
+     display: flex;
+     flex-direction: row;
+     padding: 0 1em;
+}
+
+.categoryGallery div{
+     width: 1em;
+     font-size: 4rem;
+     line-height: 350px;
+}
+
+.categoryGallery img{
+     max-width: 90%;
+     flex-grow: 1;
+}
+
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+.exampleTeaser{
+     width: 80%;
+     margin: 2em auto;
+}
+
+.exampleTeaser a{
+     border: 2px solid lightgray;
+     color: black;
+}
+
+.exampleTeaser p{
+     margin-bottom: 2em;
+}
+
+.exampleTeaser section{
+     display: inline-block;
+     vertical-align: middle;
+     width: 60%;
+}
+
+.exampleTeaser > img{
+     /* float: left; */
+     display: inline-block;
+     vertical-align: middle;
+     width: 33%;
+     margin: 1em;
+}
+
+.alternate img{
+     /* float: right; */
+     display: inline-block;
+     vertical-align: middle;
+}
+
+.alternate{
+     text-align: right;
+}
+
+.buyBanner{
+     text-align: center;
+     background-color: seagreen;
+     color: white;
+}
+
+.buyBanner p, .buyBanner a{
+     display: inline-block;
+     margin: 1em 2em;
+}
+
+.buyBanner a{
+     background-color: black;
+     border: 2px solid black;
+     color: white;
+}
+
+.buyBanner a:hover{
+     color: black;
+     background-color: white;
+}
+
+
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+.infomational{
+     display: flex;
+     flex-direction: row;
+     color: white;
+     background-color: #333;
+     font-size: .8rem;
+     padding: 0 2em;
+}
+
+.infomational section{
+     flex: 1;
+     padding: 0 1em;
+}
+
+.infomational button, .infomational input{
+     display: inline-block;
+     border: none;
+     height: 2rem;
+}
+
+hr{
+     border: 1px solid darkgray; 
+}
+
+.infomational button{
+     background-color: goldenrod;
+     color: white;
+     width: 30%;
+     height: 2rem; 
+}
+
+.infomational span{    
+     color: goldenrod;
+}
+
+.infomational input{    
+     width: 65%;
+}
+
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+.button-right{
+     text-align: right;
+}
+
+.logo{
+     font-family: 'Sacramento', cursive;
+     font-weight: 900;
+     font-size: 2.5rem;;
+     margin: 0;
+}
+
+.button{
+     text-decoration: none;
+     padding: .5em 1.5em;
+     border-radius: 2px;
+}
+
+.button:hover, button:hover{
+     background-color: seagreen;
+     border: 2px solid seagreen;
+     color: white;
+}
+
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+.attributions{
+     color: silver;
+     text-align: center;
+     font-size: .8rem;
+     line-height: 1.5rem;
+}
+
+.attributions p{
+     margin: .5rem 0;
+}
+
+.attributions i{
+     padding: 0 .5em;
+     color: goldenrod;
+}
+
+.attributions span{
+     float: right;
+     font-size: 1.5rem;
+}
+
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+
+@media  (max-width:900px) {
+     ul{
+          font-size: .7rem;
+     }
+
+     .logo{
+          font-size: 2rem;
+     }
+}
+
+@media  (max-width:800px) {
+     .right li + li{
+          display: none;
+     }
+
+     footer section:nth-child(2){
+          display:none;
+     }
+     footer section:nth-child(3){
+          display:none;
+     }
+
+     .exampleTeaser img{
+          float: none;
+     }
+
+     .exampleTeaser section{
+          padding: 0;
+     }
+     .exampleTeaser, .alternate{
+          text-align: center;
+     }
+}
+
+@media  (max-width:700px) {
+     .right li + li{
+          display: none;
+     }
+
+     nav ul{
+          display: none;
+     }
+
+     .mobileMenu{
+          display: block;
+          float: right;
+     }
+
+     .miniNav ul:first-child{
+          display: none;
+     }
+
+     .miniNav ul{
+          float: left;
+          margin: 0;
+     }
+
+     .logo{
+          font-size: 2.5rem;
+     }
+
+     .container{
+          width: 100%;
+          border: none;
+          margin: 0;
+     }
+
+     .topnav {
+          overflow: hidden;
+          background-color: #333;
+          position: relative;
+     }
+        
+     .topnav a {
+          color: white;
+          padding: 10px 16px;
+          text-decoration: none;
+          font-size: 16px;
+          display: block;
+     }
+        
+     .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+     }
+
+     .categoryGallery img{
+          width: 75%;
+     }
+}
+
+/* 
+400px
+.categoryGallery img{
+     width: 65%;
+}
+  */
+   
